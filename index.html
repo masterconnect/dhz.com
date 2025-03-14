@@ -1,55 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Verdana, sans-serif;
-      text-align: center;
-    }
-    .container {
-      margin-top: 60px;
-    }
-    .cmb {
-      font-size: 2em;
-      font-weight: bold; 
-    }
-    .normal-text {
-      font-size: 1.1em;
-      margin: 0.6em 0;
-      font-weight: 400; 
-    }
-    a {
-      color: #333;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App.org - For Sale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2A4D69, #fff);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #4ABDAC;
+            color: #fff;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="cmb">DHZ.com</div>
-    <div class="normal-text">Reserved for Future Use</div>
-    <div class="normal-text" id="email-container"></div>
-  </div>
-
-  <script>
-    const localPart = "support";
-    const domain = "dhz";
-    const tld = "com";
-
-    const emailAddress = localPart + "@" + domain + "." + tld;
-    const mailtoLink = "mailto:" + emailAddress;
-
-    const link = document.createElement("a");
-    link.href = mailtoLink;
-    link.textContent = emailAddress;
-
-    document.getElementById("email-container").appendChild(link);
-  </script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>DHZ.com</h1>
+        <p>The 3 letter Domain Is for Sale</p>
+        <a href="mailto:support@app.org" class="btn">Make an Offer</a>
+    </section>
 </body>
 </html>
